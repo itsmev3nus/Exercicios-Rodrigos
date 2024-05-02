@@ -1,14 +1,19 @@
 import React, { Component } from "react";
-import {View, Text, StyleSheet} from "react-native";
+import {View, Text, StyleSheet} from 'react-native';
 import Simples from "./components/Simples";
 import Membro from "./components/relacao/Membro";
 import Familia from "./components/relacao/Familia";
 import Padrao from "./estilos/Padrao";
 import Familiajson from "./components/relacao/familiajson";
+import Usuariologado from "./components/relacao/Usuariologado";
+import Botao from "./components/Botao";
+import Contador from "./components/relacao/contador";
 
-
-
-
+const Familia1 = [
+  {"nome" : "Julia", "sobreNome" : "..."},
+  {"nome" : "Alex", "sobreNome" : "..."}
+  
+]
 // retorna tag membros para não ter q repetir inteira no código
 /*function teste(PrimeiroNome : string, SegundoNome : string){
     return <Membro nome={PrimeiroNome} sobreNome={SegundoNome}/>
@@ -28,42 +33,19 @@ import Familiajson from "./components/relacao/familiajson";
 
   return pessoas; 
 }*/
-const membrosFamilia = [
-  {"nome" : "Alex", "sobreNome" : "Fagundes"},
-  {"nome": "João", "sobreNome": "Fagundes"}
-]
+
 export default class App extends Component {
   render(){
     return (
-      <View style={estilos.container}>{
-        /*<Text style={estilos.fonte}>Olá mundo</Text>
-          <Simples valor="Programando em react-native"/>
-       }
-      
-        {
-        <Frag titulo="Titulo" 
-            subTitulo="sub Titulo"  />
-            }
-            */  
-           {/*
-        {
-        <Parimpar numero={10} />
-        }
-             { {teste("Alex", "F")}
-              {teste("Talles", "F")}
-              {teste("Julia", "F")}
-      }
-    */}  
+      <View style={estilos.container}>
 
-            
-            
-            /*
-              {Mostrarpessoas(["Alex ", "F ", "Leticia ", " F"])}
-  */}
-
-      <Familiajson membros={membrosFamilia} />
-      
+      {/* <Familiajson membros={Familia1} />
+        <Usuariologado usuario={{nome= 'teste', email: ' teste@teste.com'}/> 
+     <Botao />
+     */}
+     <Contador />
       </View>
+      
     );
   }
 }
